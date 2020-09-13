@@ -50,24 +50,24 @@ int main(void){
         float cconv = ftoc(temp);
         float kconv = ftok(temp);
 
-        printf("%.2f Fahrenheit converts to:\n\t%.2f C\n\t%.2f K",temp,cconv,kconv);
+        printf("%.2f Fahrenheit converts to:\n\t%.2f C\n\t%.2f K\n",temp,cconv,kconv);
     }
     else {
         if (temptype == 'c' || temptype == 'C') {
             float fconv = ctof(temp);
             float kconv = ctok(temp);
 
-            printf("%.2f Celsius converts to:\n\t%.2f F\n\t%.2f K",temp,fconv,kconv);
+            printf("%.2f Celsius converts to:\n\t%.2f F\n\t%.2f K\n",temp,fconv,kconv);
         }
         else {
             if(temptype == 'k' || temptype == 'K') {
                 float fconv = ktof(temp);
                 float cconv = ktoc(temp);
-                printf("%.2f Kelvin converts to:\n\t%.2f F\n\t%.2f C",temp,fconv,cconv);
+                printf("%.2f Kelvin converts to:\n\t%.2f F\n\t%.2f C\n",temp,fconv,cconv);
             }
             /* If invalid character entered */
             else {
-                printf("Invalid temperature scale");
+                printf("Invalid temperature scale\n");
                 return -1;
             }
         }
