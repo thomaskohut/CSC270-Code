@@ -1,3 +1,4 @@
+//For exercises done in class for classes 9/8/2020 - 9/10/2020
 #include <stdio.h>
 
 //For triangles
