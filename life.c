@@ -32,7 +32,7 @@ int main(int argc, char *argv[]) {
 
 
 void initBoard(int vBoard[XSIZE][YSIZE]) {
-    for(int x=0; x < XSIZE-1; x++) {
+    for(int x=0; x < XSIZE; x++) {
         for(int y=0; y<YSIZE;y++) {
             vBoard[x][y] = DEAD;
         }
@@ -46,7 +46,7 @@ void playRound(int vBoard[][YSIZE]) {
 	// perform the algorithm on vBoard, but update tmpBoard
 	// with the new state
 
-    for(int x=0; x < XSIZE-1; x++) {
+    for(int x=0; x < XSIZE; x++) {
         for(int y=0; y<YSIZE;y++) {
             if(neighbors(vBoard,x,y)<2 || neighbors(vBoard,x,y)>3) {
                 tmpBoard[x][y] = DEAD;
@@ -94,7 +94,7 @@ int neighbors(int vBoard[XSIZE][YSIZE], int x, int y) {
 }
 
 void printBoard(int vBoard[XSIZE][YSIZE]) {
-    for(int x=0; x < XSIZE-1; x++) {
+    for(int x=0; x < XSIZE; x++) {
         for(int y=0; y<YSIZE;y++) {
             printf("%d", vBoard[x][y]);
         }
