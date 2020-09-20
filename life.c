@@ -34,7 +34,7 @@ int main(int argc, char *argv[]) {
 void initBoard(int vBoard[XSIZE][YSIZE]) {
     for(int x=0; x < XSIZE-1; x++) {
         for(int y=0; y<YSIZE;y++) {
-            vBoard[x][y] = 0;
+            vBoard[x][y] = DEAD;
         }
     }
 }
