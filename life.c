@@ -92,7 +92,9 @@ int neighbors(int vBoard[XSIZE][YSIZE], int x, int y) {
 
 	return n;
 }
-
+// 000
+// 0x0
+// 000
 void printBoard(int vBoard[XSIZE][YSIZE]) {
     for(int x=0; x < XSIZE; x++) {
         for(int y=0; y<YSIZE;y++) {
