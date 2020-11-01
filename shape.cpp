@@ -1,10 +1,30 @@
 #include <sstream>
+#include <iostream>
+#include <fstream>
 #include "shapes.h"
 
-
 Rectangle::Rectangle(float length, float width) {
-	this->length = length;
-	this->width = width;
+	try{
+	if(length < 0) {
+		throw 1;
+	} else {
+		if(width < 0) {
+			throw 2;
+		} else {
+			this->length = length;
+			this->width = width;
+		}
+	}}
+
+	catch(int num){
+		if(num == 1) {
+			std::cerr << "Error: Length is negative.";
+		} 	else {
+				if(num == 2) {
+					std::cerr << "Error: Width is negative.";
+				} 
+			}
+	}
 }
 
 float Rectangle::getlength() const {
@@ -32,6 +52,16 @@ std::string Rectangle::str() const {
 }
 /******************************/
 Square::Square(float side) : Rectangle(side, side) {
+	try {
+	if(side < 0) {
+		throw 3;
+	}}
+	
+	catch(int num) {
+		if(num == 3) {
+			std::cerr << "Error: Sides is negative.";
+		}
+	}
 }
 
 std::string Square::str() const {
@@ -43,7 +73,18 @@ std::string Square::str() const {
 }
 
 Circle::Circle(float radius) {
-	this->radius = radius;
+	try {
+	if(radius < 0) {
+		throw 4;
+	} else {
+		this->radius = radius;
+	}}
+
+	catch(int num) {
+		if(num == 4) {
+			std::cerr << "Error: Radius is negative.";
+		}
+	}
 }
 
 float Circle::getradius() const {

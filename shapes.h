@@ -3,7 +3,6 @@
 #define PI 3.14159
 
 class Shape {
-
 public:
 	virtual float area() const = 0;
 	virtual float perimeter() const = 0;
@@ -12,7 +11,6 @@ public:
 
 /* Rectangle class */
 class Rectangle : public Shape {
-
 public:
 	Rectangle(float length, float width);
 	float getlength() const;
@@ -35,7 +33,6 @@ public:
 
 /* Circle */
 class Circle : public Shape {
-
 public: 
 	Circle(float radius);
 	float getradius() const;
