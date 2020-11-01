@@ -39,7 +39,7 @@ class Professor: public Person {
         std::string getrank() const;
         std::string getname() const;
         std::string getid() const;
-        std::string getpublications() const;
+        int getpublications() const;
         void setrank(std::string newrank) const;
         void setpublications(int newpublications) const;     
     private: 

@@ -33,9 +33,9 @@ std::string Student::getmin() const {
 std::string Student::getdata() const {
     std::stringstream res;
     if (min.compare("none") == 0) {
-        res << "" << maj << " major " << name << " (id " << id << ")";
+        res << "" << getmaj() << " major " << getname() << " (id " << getid() << ")";
     } else {
-    res << "" << maj << " major " << name << " (id " << id << ") minors in " << min << "";
+    res << "" << getmaj() << " major " << getname() << " (id " << getid() << ") minors in " << getmin() << "";
     }
     return res.str();
 }
@@ -63,15 +63,13 @@ std::string Professor::getrank() const {
     return rank;
 }
 
-std::string Professor::getpublications() const {
-    std::stringstream res;
-    res << "" << id << "";
-    return res.str();
+int Professor::getpublications() const {
+    return publications;
 }
 
 std::string Professor::getdata() const {
     std::stringstream res;
-    res <<"" << rank << " professor " << name << " (id " << id << ") has " << publications << " publications";
+    res <<"" << getrank() << " professor " << getname() << " (id " << getid() << ") has " << getpublications() << " publications";
     return res.str();
 }
 
