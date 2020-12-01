@@ -1,1 +1,0 @@
-Professor::Professor(int id, std::string name, int publications, std::string rank) {
