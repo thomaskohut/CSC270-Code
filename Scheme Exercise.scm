@@ -8,7 +8,7 @@
     ;;B
         (display (/ (+ (/ 2 3) (/ 4 9)) (- (/ 5 11) (/ 4 3))))
     ;;C
-        (display  (+ 1 (/ 1 (+ 2 (/ 1 (+ 1 (/ 1 2)))))))
+       (display  (+ 1 (/ 1 (+ 2 (/ 1 (+ 1 (/ 1 2)))))))
     ;;D
         (display (* 1 (* -2 (* 3 (* -4 (* 5 (* -6 7)))))))
 
@@ -17,7 +17,7 @@
         (display (cons 'car 'cdr) )
     ;;B (Answer is (this (is silly)))
         (display (list 'this '(is silly)))
-    ;;C (Answer is (is this silly?))
+   ;;C (Answer is (is this silly?))
         (display (cons 'is '(this silly?)) )
     ;;D (Answer is (+ 2 3))
         (display (quote (+ 2 3)))
@@ -47,6 +47,6 @@
     ;;Displays B
         (display (cdr (car '((a b) (c d)))))
     ;;Displays C
-        (display (car (car (cdr '((a b) (c d))))))
+        (display (car (cdr '((a b) (c d))))))
     ;;Displays D
         (display (cdr (car (cdr '((a b) (c d))))))

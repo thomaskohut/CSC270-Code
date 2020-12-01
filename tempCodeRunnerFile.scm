@@ -1,0 +1,7 @@
+(define (reverse b)
+;     (if (null? b)
+;     '()
+;     (append (reverse (cdr lis))
+;             (list(car lis)))
+;     )
+; )
